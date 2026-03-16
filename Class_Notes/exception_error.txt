@@ -1,0 +1,30 @@
+ZeroDivisionError: Occurs when you try to divide a number by zero using /, //, or %.
+    - result = 10 / 0   # Division by zero
+    - result = 10 // 0  # Floor division by zero
+    - result = 10 % 0   # Modulo by zero
+
+NameError : Using a variable or function name that has not been defined.
+    - print(result)  # result is not defined
+    - def add(x, y):
+        return x + y
+      print(sum)  # Intended to call add()?
+
+SyntaxError: Happens when Python code violates its syntax rules (structure of the language).
+    - if True
+        print("Hello")  # Missing colon
+    - print("Hello"  # Missing closing parenthesis
+
+IndentationError: Occurs when the indentation (spaces/tabs) is incorrect or inconsistent.
+    - def greet():
+      print("Hello")  # Not indented correctly
+    - if True:
+        print("Hi")
+            print("Hello")  # Mixed indentation
+
+TypeError: Performing an operation on an incompatible type.
+    - "5" + 2  # Cannot concatenate str and int
+    - len(42)  # int type has no length
+
+ValueError: Using the correct type but an invalid value for that type.
+    - int("abc")  # Cannot convert non-numeric string to int
+    - range(-5)  # Works fine, but something like math.sqrt(-1) will cause ValueError

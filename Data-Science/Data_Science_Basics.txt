@@ -1,0 +1,26 @@
+## Basic Descriptive Statistics
+1) minimum: smallest value in a collection of values
+2) maximum: largest value in a collection of values
+3) range: difference between the maximum and minimum
+4) count: number of values in a collection
+5) sum: total of the values in a collection
+
+--> Measure of Dispersion (also called Measures of Variability)
+    - range
+    - help detemine how spread out values are
+    - variance and standard deviation
+
+
+
+--> GenAI Prompt:
+    - Give me a list o commonly used descriptive statistics in data science with a brief overview of each.
+    
+
+--> Mesures of Central Tendency - Mean, Median and Mode
+        Central Tendency: is the central value somehow of your set or sequence of values.
+        Mean: average value in a set of values.
+        Median: middle value when all the values are arranged in sorted or assending order.
+        Mode: most frequently occurrig value.
+
+        ** check Data-Science 01-mean-median-mode.ipynb
+

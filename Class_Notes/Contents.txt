@@ -1,0 +1,17 @@
+* Introduction to Python
+* Download and Install
+* Using another options to learn Pythons (online, Amaconda, Jupyter LAB)
+* Basics Operations
+* Control Statements
+* Functions
+* Sequences (Listss, Tuples)
+* Dictionaries and Sets
+* Array with Numpy and Pandas
+* Strings
+* Files and Exceptions
+* NLP (Natural Language Processing)
+* Data Mining
+* IBM< Watson
+* ML (Machine Learning)
+* Deep Learning
+* Big Data

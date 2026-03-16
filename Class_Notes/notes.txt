@@ -1,0 +1,560 @@
+### Tools Setup to use Python
+
+1) Install Anacond  (https://www.anaconda.com/download)
+    It includes:
+        - IPython interpreter
+        - Local Jupyter Notebooks
+        - Python and Data Scinec libraries
+2) Update the Anaconda
+    Lauch the Anaconda CMD or Anaconda powershell Prompt (as administrator) and try to run conda command to see help and update it  
+    # conda
+    # conda update conda
+    # conda update --all
+        (will list the platform like windows/linux, environment- base is default, channels from where it will udpate the packages)
+        (will show the installed packages or libraries, udpate them if required or install new as well if required)
+
+3) Conda and Pip Package Manager
+    - packages contain files to install python libraries or tools, we use conda or pip
+    - some advanced library install, only possible with pip
+    - you can install with conda if a particular package is supported
+
+--> for online: use https://colab.google.com
+
+#######################################
+
+Creating a Virtual Enviornment
+    If we need to run the different environment or library than BASE (instead to modify the base environment), we can create a custom environment. (will look like - (base) PS C:\WINDOWS\system32>)
+    --> Create a virtual environment with conda
+    # conda create --name my_env python=3.13 ipympl ipython jupyterlab matplotlib nodejs numpy seaborn
+    # conda actiate my_env (to activate it)
+    # conda deactivate (to deactivate and return to base)
+    # conda env list (to list all environment)
+
+    ((ipympl --> dunamic visualization, ipython --> command line interpreter, jupyterlab --> Jupyter GUI interface, matplotlib --> visualization library, nodejs --> Java Script Package to deal with JavaScript code, nunmy --> numerical pythn programming library, seaborn --> visualization library))
+
+    --> Create a virtual environment with python command
+	# python -m venv myenv
+	# myenv\Scripts\activate (to activate it)
+	
+	** Activate the virtual environment (on macOS/Linux)
+	# source myenv/bin/activate
+    
+    -->	Once activated, you work in an isolated workspace with its Python interpreter and library dependencies.
+
+
+#######################################
+
+Understanding files and its extentions:
+1) interactive mode: small lines of python code called snippets which gives immedieately results while running.
+2) script mode: excute code from .py file
+3) Jupyter Notebooks: browser based IDE-like env where we can write/execute code which can include text, images, videos and more. File extention will be .ipynb file
+
+########################################
+
+ipython interpreter:
+    running command with this interpreter like directly in anaconda powershell prompt
+    # ipython (which will switch to ipython interpreter shell mode)
+    - there we can run out code and get the result.
+    - like adding or doing other mathematical operations with numbers
+
+    In [1]: 45 +70
+    Out[1]: 115
+
+    # ipython <file_name>.py (to run the file)
+
+    # open jupyter Notebooks:
+    - in same prompt run - jupyter lab (which will create a local server for this and open the Notebooks in your browser, wehere we can explore the existing folders/files, create a new file, notebook, text file, markdown file)
+
+###########################################
+--> Fundamentals
+
+    * Statements and Script
+    * Variable
+    * Built-in data types
+    * Built-in function type to inspect an object's type
+    * Arithmetic and Comparison operators
+    * Single, Double and Triple quoted strings
+    * Built-in function print to display text and input to get data from the user
+    * Convert text to numberic values
+    * Comparison operators and the if Statement
+    * Dynamic typing
+    * Use GenAI to leverage your Python learning Experience
+    * Objects-natural case study: Creating and interacting with objects of the built-in str class
+    * Into to Data Science: Basic Descriptive Statistics
+
+###########################################
+
+    --> Variables and Assignment Statement:
+
+       * variable start will lower letter as well
+       * there are some inbuilt variable which start with Capital letter (will look into those later in this section)
+       * if we have multiple keywords or want to serate those words in variable then use underscore(_)
+       * to define the variable, we use assignment opertor
+       * for any variable, python creates the object and assign the memory automatically and there is Garbage Collector, which can reclaim the assigned memory to objects if not in use.
+       * Inspecting the variable type or given input, we can use the type function to check the datatype for a variable or given input
+
+       ## check - 02-variable.ipynb file
+
+       ** We can use GenAI and give prompts to take adavantage from GenAI
+        - Chat GPT
+        - Copilot from Microsoft
+        - Gemini from google
+        - Perplexity 
+        - Anthropx Claude
+
+###########################################
+    --> Arithmetic
+        * Addition +
+        * Subtraction -
+        * Multiplication *
+        * Exponentiation ** (power)
+        * True Division /
+        * Floor Division //
+        * Remainder (modulo) %
+
+        ## check 03-arithmetic.ipynb
+
+        ** How the remainder operator % works with combinations of positive and negative values for the numerator and denominator?
+            - The remainder in Python always satisfies:
+                    dividend = divisor × quotient + remainder 
+                    and
+                    sign of remainder = sign of divisor
+
+###########################################
+    --> print function and single/double quoted strings 
+
+        In [17]: print('welcome to Path4Cloud') # we can put the string in single quotes
+        welcome to Path4Cloud
+
+        In [18]: print("welcome to Path4Cloud") # we can put the srting in double quotes
+        welcome to Path4Cloud
+
+        In [20]: print('Welcome\nto\nPath4Cloud!!')  # \n to print the srting to next line
+        Welcome
+        to
+        Path4Cloud!!
+
+        In [23]:  print("'Welcome to Path4Cloud'") # if we need to print string in single quotes then we can enclosed with double quotes
+        'Welcome to Path4Cloud'
+
+        In [24]:  print('"Welcome to Path4Cloud"') # if we need to print string in double quotes then we can enclosed with single quotes
+        "Welcome to Path4Cloud"
+
+        ## Escape Character
+        \n --> Insert a new line character in string
+        \t --> Insert a horizontal tab in string
+        \\ --> Insert a backslash character in string
+        \" --> Insert a double quotes in a string
+        \' --> Insert a single quotes in a string
+
+        In [25]: print("Welcome\tto\tPath4Cloud")
+        Welcome to  Path4Cloud
+
+        In [26]: print("Welcome\\to\\Path4Cloud")
+        Welcome\to\Path4Cloud
+
+
+        ## if we have multiline comment or string, we can't use this way, it can take the input as multiline but will print in one line only.
+
+        In [30]: print('This is multiline string, \ 
+        ...: I am first line, \
+        ...: I am second line')
+        This is multiline string, I am first line, I am second line
+
+
+        DOCSTRING
+        ## if we have multiple comment or string, we can use """ triple quotes to print in multiline as specified.
+
+        In [31]: print("""This is multiline string,  
+         ...: I am first line,
+        ...: I am second line""")
+        This is multiline string,
+        I am first line,
+        I am second line
+
+        ## triple quoted string are stored in memory by python as single line
+        In [40]: triple_string="""I am given as multiline,
+        ...: but stored as single line in memory"""
+
+        In [41]: print(triple_string) # using print, it will print the lines in multiline
+        I am given as multiline,
+        but stored as single line in memory
+
+        In [42]: triple_string # if we just wanted to check the variable value, you can see \n is there which indicates a single line in memory and right after that, we have second line printed in same line.
+
+        Out[42]: 'I am given as multiline, \nbut stored as single line in memory'
+
+        ## we can club the string with operation as well, specify the string in qutoes.
+
+        In [32]: print("sum is", 2 + 4)
+        sum is 6
+
+        ## we can change the data type with defining the data type like:
+
+        In [36]: print('int(5.2)', 'truncates 5.2 to', int(5.2))  # so here int, changes the 5.2 float to int 5
+        int(5.2) truncates 5.2 to 5
+
+###########################################
+    --> Getting input from user
+        when we have requrirement to take the input from keyboard.
+
+        # we can use the input function, which will take the input from user
+        # if we store the value in variable then it will be printed in single quotes
+
+        # if we input the vaule in single quotes, then python will persist the quotes using double quotes enclosed to that input and vice versa.
+
+        ** reason, it will accept the input always as string
+
+        # If we need to print or store the value (especailly numbers) as int datatype then we can convert the datatype 
+
+        ** check 04-input_from_user.ipynb
+
+        ** Prompt to AI : Why the input function always returns a string?
+
+###########################################
+    --> If statement and comparison operators
+        - in Python, a condition is a expression that results in a Boolean Value of Capital T True or Capital F False
+
+        - if statement syntax
+            - If is a staic keyword, already reserved in Python.
+            - when we start the if statement then we need to define the condition using operator which we discussed above.
+            - after condtion, if statement must be closed with colon (:), called as suite which tells the python to maintain the       indendation for further statement after colon
+            - we normaly uses 4 white spaces as space under if statement to maintain the statement
+            - you can keep any number of spaces for indentation but it must be persistent across all statement
+            - we can close or omit the spaces to close the simple if statement
+
+        - if..else
+            - where we have two statement to compare if first statement is not satisfied then by default, print else statement.
+
+        - if..elif..else
+            - where we have mulitple statement to compare, and if any statement is failed then next statement will be checked until its get satisfied or reaches to else statement.
+
+            ** check 05-if_statement.ipynb
+
+###########################################
+    --> Object and Dynamic typing
+        - whenever we assign some value to any variable then internally, Python creating an identifier for that and it aims a portion of memory, which is an datatype obejct containing that value. e.g.
+        x = 10
+        here, x is the identifier which contains memory address where value is stored and refers to integer object containing value 10.
+
+        - we can change the any identifier to any object in Python, called dyanmic typing. Python automatically updates the variable type as needed. This happens because type checking is done at runtime, not before execution (compile time).
+        e.g.
+
+        >>> x = 10
+        >>> x + 5
+        15
+        >>> x # it still 10 now
+        10
+        >>> type(x)
+        int
+        >>> x = 10.5
+        >>> type(x)
+        float
+        
+        ** We must know the built-in keywords or identifier before we assign any obejcts type, else it will result to syntax error.
+
+        check the official python documents for more info:
+            https://docs.python.org/3/library/index.html
+
+        ** Prompt to AI :
+            - Why Python is dynamically typed, and its pros and cons?
+            - Analogies that help explain dyanmic typing
+            - how Garbage collection works in python?
+
+    --> STR Class Object in python (check 06-str_object.ipynb)
+        Each datatype in python is defined as known as CLASS and Class is a reusable software component that's kind of like a blueprint for how to create objects adn their capabilities.
+
+        e.g.
+        we can assign some string values to and check the lenght of string using built-in fuction len() and also we can compare the strings:
+        a1 = 'Hello'  # we can assign string and here length is 5 character
+        a2 = ' there' # here length is 6 character since white space is also stored as one character in memory
+        a3 = '' # here its zero since no character is assigned
+
+        a1 == 'Hello' # will print True since, its case sensitive comparison
+        a1 == 'hello' # will print False beacuse python uses "Lexicigraphical comparison", its uses the actual Unicode Integer value of each character in the Python character. Like A is 65 and small a is 97.
+
+        a3 = a1 + a2
+        (here this opertiaon can't modify the empty string rather it created a new string object and that refers to a3 now.)
+        These data types are immutatble data types, we can't modfify them rather we can create a new object in memory.
+
+    --> Standalone Functions:
+            that can be called on particular string objects, knwon as METHODS.
+            Anytime you call a function on a specific object, it's a method of that class that the object belongs to.
+            e.g.
+            a1 = 'happy'
+            here a1 is type of string object and we want to know whether its starts with 'ha' or not then we can call method "startswith" which belongs to STR object.
+
+            a1.startswith('He') # will return True 
+
+            a1.startswith('he') # will return False 
+
+            a1.endswith('lo') # will return True
+
+            ### since all comparison are case sensitive because its follows Unicode character comparison
+
+###########################################
+    --> In built Functions
+        min()
+        max()
+        avg()
+        sorted()
+        len()
+        sum()
+
+        ** check 07-inbuilt_func.ipynb
+
+        programming types:
+            1) Procedural or Imperative programming (where we just define and get the things done in same way)
+            2) Functional or Object-Oriented programming
+
+        ** most of the inbuilt functions like min(), max(), avg(), sum(), which takes a collection of data and reduces it to a single value is knows as a "reduction" in the context of functional programming.
+
+
+###########################################
+    --> while loop
+    A while loop in Python repeatedly executes a block of code as long as a specified condition is True. It's used when you don't know the exact number of iterations needed in advance. The loop continues to run until the condition becomes False
+
+    check 08-while_statement.ipynb
+
+###########################################
+    --> for loop
+    A for loop in Python is used to iterate over a sequence of items, such as a list, tuple, dictionary, set, or string. It's used when you know the exact number of times you want to repeat a block of code.
+
+    check 09-for_statement.ipynb
+
+###########################################
+    --> sequence controlled iteration:
+        Sequenced-controlled iteration, also known as counter-controlled iteration or definite iteration, is used when you know the exact number of times you want a loop to run. The loop is controlled by a counter that increments or decrements with each iteration until a predefined number is reached
+
+    --> Sentinel-Controlled Iteration:
+        Sentinel-controlled iteration, also known as indefinite iteration, is used when you don't know the exact number of iterations beforehand. The loop continues to run until it encounters a specific value called a sentinel value, which signals the end of the input or data
+
+        check 10-controlled-sentinel-seq.ipynb
+
+###########################################
+    --> Builtin range() function:
+        we have 3 version of range functions:
+            a) with single argumets, it will give the starting value 0 and ending value upto that defined value but not included.
+                e.g. in this range(10), it will print 0 and 9, 10 will not be included
+                In [111]: for i in range(10):
+                ...:     print(i, end=' ')
+                ...:
+                0 1 2 3 4 5 6 7 8 9
+
+            b) with starting and ending argumets, it will print the starting value from first argument and ends at one number before the second argument.
+            e.g. in this range(2, 6), it will print 2,3,4,
+            In [112]: for i in range(2,6):
+            ...:     print(i, end=' ')
+            ...:
+            2 3 4 5
+
+            c) with three argument: where we want a interval not the consecutive or sequence of numbers.
+            e.g. in this range(0,10,2), it will print 0,2,4,6,8
+            In [113]: for i in range(0,10,2):
+            ...:     print(i, end=' ')
+            ...:
+            0 2 4 6 8
+
+            ** it can print in reverss direction:
+            In [114]: for i in range(10,0,-2):
+            ...:     print(i, end=' ')
+            ...:
+            10 8 6 4 2
+
+
+###########################################
+    --> Decimal Type (not builtin, additional library which are predefined compatability with Python))
+        sometime, we need to deal with monetary amount or some exact numbers especailly floating number. By default, Python stores the float number as binary and if we need to print some additinoal decimal values on the right side of dot in value, then it might give you some buggy number which would be an issue if we are dealing with monetary amounts.
+        e.g.    
+        In [133]: f= 112.31
+
+        In [134]: print(f)
+        112.31
+
+        In [135]: print(f'{f:.20f}')
+        112.31000000000000227374
+
+        ** we can import the Decimal library to fix this with import command
+        In [138]: from decimal import Decimal ## Some libraries are coming from common module so we can impot only requried library from a module instead of import whole, here decimal is a module and Decimal is library.
+
+        We can define the value with Decimal as string and also perform the arithmetic operation:
+        ## we need to define a float value in Decimal like this, which will convert this value automatically in floating.
+
+        In [143]: x = Decimal('12.5')
+
+        In [144]: y = Decimal('3')
+
+        In [145]: x + y
+        Out[145]: Decimal('15.5')
+
+        In [146]: x // y
+        Out[146]: Decimal('4')
+
+        ** solve a Compound Interest problem with Decimal
+        A person invest  1000 INR in a saving account with 5% interest. Assuming that the person leaves all interest on deposit in the account, calculate and display the amount of money in the account at the end of each year for 10 years. Use this formula fro determining the amounts:
+        a = p(1+r)n (n is the power of (1+r))
+
+        In [139]: principal = Decimal('1000.00')  
+        In [140]: rate = Decimal('0.05')
+
+        In [150]: for year in range(1,11):
+        ...:     amount = principal * (1 + rate) ** year
+        ...:     print(f'{year:>2}{amount:>10.2f}')
+        ...:
+        1   1050.00
+        2   1102.50
+        3   1157.62
+        4   1215.51
+        5   1276.28
+        6   1340.10
+        7   1407.10
+        8   1477.46
+        9   1551.33
+        10   1628.89
+
+###########################################
+    --> break and continue statement
+        It can be used with context of for and while loop to continuee or break the statement.
+
+        ** to break the iteraton:
+        In [165]: for number in range(100):
+        ...:     if number == 10:
+        ...:         break
+        ...:     print(number, end=' ')
+        ...:
+        0 1 2 3 4 5 6 7 8 9
+
+        ** to continue the statement when it matches:
+        In [167]: for number in range(10):
+        ...:     if number == 5:                ## notice: when 5 is matched, it was skipped and continue to print others
+        ...:         continue
+        ...:     print(number, end=' ')
+        ...:
+        0 1 2 3 4 6 7 8 9
+
+        ** check 11-continue-break-statement.ipynb
+
+###########################################
+    --> Boolean Operator and, or and not
+        used to create more complex condition since we need to check more condition with single statement in order to execute.
+
+        ** check 12-boolean-operator.ipynb
+
+###########################################
+
+    --> Function:
+        Apart from inbuilt function, we can create are own functions as per our requirement.
+        we need to defined the function with "def" keyword.
+        e.g.
+        def square(number):
+            """Calculating square of given number""" # always put in doc string format
+            return number ** 2
+
+        ** Function with multi parameter:
+        def maximum (num1,num2,num3):
+            """ Calculating the maximum number from given list"""
+            max_num = num1
+            if num2 > max_num:
+                max_num = num2
+            if num3 > max_num:
+                max_num = num3
+            return max_num
+
+
+        ** check 13-functions.ipynb
+
+###########################################
+    --> Random numbers
+        to generate or get the random numbers, we need to import the randoom library.
+        # import random
+        random.random()
+
+        seed function with randome generator value:
+            if we run the random function then it will just give you any random number and will not goana repeat but if we seed some random number at some point and then will generate random number then it will gonna each item random number but if you call the seed facuntion again, then random will generate the same number of sequence which was started from the previous run of seed function.
+            USE CASE: When your randome data for simulation purpose and you need to get the same set of random data for testing puropese, then we can use seed function, and seed some value to random generator number.
+
+        ** check 14-random-num.ipynb
+
+###########################################
+    --> List, Set, Tuple, dictionary
+
+        List: 
+            - Ordered (keeps the order of insertion).
+            - Mutable (you can change elements).
+            - Allows duplicates.
+            - denotes with [ ]
+ 
+        Tuple:
+            - Ordered
+            - Immutable (cannot change once created).
+            - Allows duplicates.
+            - Use when data should not change (like fixed config values).
+            - not mandatory to enclose with () but to better readability or as best practices, we enclose with ()
+
+        Set:
+            - Unordered (no index, order may change).
+            - Mutable (can add/remove elements).
+            - No duplicates allowed (automatically removes them).
+            - Great for checking unique items or membership tests (in is very fast in sets).
+
+        Dictionary:
+            - Stores data as key: value pairs.
+            - Keys must be unique and immutable (string, number, tuple).
+            - Values can be anything.
+            - Mutable.
+
+        Key Differences (Summary)
+        Feature	    List	    Tuple   	Set	       Dictionary
+        Ordered	    ✅ Yes	    ✅ Yes	❌ No	    ✅ Yes (since Python 3.7)
+        Mutable	    ✅ Yes	    ❌ No	✅ Yes	    ✅ Yes
+        Duplicates	✅ Yes	    ✅ Yes	❌ No	    Keys ❌, Values ✅
+        Access by	Index	      Index	    No index	 Key
+        Use Case	Store 	      Fixed 	Unique 	    Key–value mappings (lookups)
+                    sequence      data      items
+
+        👉 Simple analogy:
+
+        List = Shopping list (you can add/change items, order matters).
+
+        Tuple = Passport info (fixed, cannot change).
+
+        Set = Attendees in a meeting (no duplicates).
+
+        Dictionary = Phonebook (name → number mapping).
+
+        ** check 15-data-structure.ipynb
+
+###########################################
+    --> Math Module:
+        we have already predefined math module functions so we can use those while importing the math module.
+        if you want to check what all sub functions to math are supported then you can type math. and then hit TAB buttion, will list all the supported methods.
+
+ math.
+ acos()      atan2()     copysign()  e           expm1()     frexp()     inf         isqrt()     log10()     nextafter() radians()   sumprod()   ulp()
+ acosh()     atanh()     cos()       erf()       fabs()      fsum()      isclose()   lcm()       log1p()     perm()      remainder() tan()
+ asin()      cbrt()      cosh()      erfc()      factorial() gamma()     isfinite()  ldexp()     log2()      pi          sin()       tanh()
+ asinh()     ceil()      degrees()   exp()       floor()     gcd()       isinf()     lgamma()    modf()      pow()       sinh()      tau
+ atan()      comb()      dist()      exp2()      fmod()      hypot()     isnan()     log()       nan         prod()      sqrt()      trunc()
+
+        If we want help to check, how can we run any method then we can ask for help as below:
+        # math.pow?
+        # math.ceil?
+
+        ** check python.org for more information on math library and how more methods or logic can be used.   
+
+
+###########################################
+    --> Default parameter value:
+        It is a best practice to keep some default value while defining the variable that will give the more flexibility to use those variables either in functions or any where in call.
+        e.g.: lets define a function to calculate the mulitplication of two numbers, and assign a default value to those parameter in function defintion only, if user provides any values and use those else use defaults.
+
+    --> We can define the variable with no defualt value and here its mandatory to pass the vales at calling time:
+        def mulitply(num1, num2)
+
+    --> Or you can pass any number of parameter to function then we can define the Arbitrary Argument as below:
+        def average(*arg)
+
+        ** we can use this *arg with default parameter or mandatory parameter but make sure, this will be the last in parameter queue
+         def conversion(total,rate,*args)
+
+         ** check 16-play_with_arguments.ipynb
