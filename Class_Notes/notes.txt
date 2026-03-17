@@ -4,7 +4,8 @@
     It includes:
         - IPython interpreter
         - Local Jupyter Notebooks
-        - Python and Data Scinec libraries
+            (** Here Jupyter stands for JU-Julia, PYT-Python and R-R Stastical languages and come with default support for these 3 languages but we can install another kernels to work with another languages)
+        - Python and Data Science libraries
 2) Update the Anaconda
     Lauch the Anaconda CMD or Anaconda powershell Prompt (as administrator) and try to run conda command to see help and update it  
     # conda
@@ -14,9 +15,9 @@
         (will show the installed packages or libraries, udpate them if required or install new as well if required)
 
 3) Conda and Pip Package Manager
-    - packages contain files to install python libraries or tools, we use conda or pip
-    - some advanced library install, only possible with pip
-    - you can install with conda if a particular package is supported
+    - packages contain files to install python libraries or tools, we use conda or pip.
+    - some advanced library installation is only possible with pip.
+    - you can install with conda if a particular package is supported else use pip that completly fine.
 
 --> for online: use https://colab.google.com
 
@@ -30,7 +31,7 @@ Creating a Virtual Enviornment
     # conda deactivate (to deactivate and return to base)
     # conda env list (to list all environment)
 
-    ((ipympl --> dunamic visualization, ipython --> command line interpreter, jupyterlab --> Jupyter GUI interface, matplotlib --> visualization library, nodejs --> Java Script Package to deal with JavaScript code, nunmy --> numerical pythn programming library, seaborn --> visualization library))
+    ((ipympl --> dynamic visualization, ipython --> command line interpreter, jupyterlab --> Jupyter GUI interface, matplotlib --> visualization library, nodejs --> Java Script Package to deal with JavaScript code, numpy --> numerical python programming library, seaborn --> visualization library))
 
     --> Create a virtual environment with python command
 	# python -m venv myenv
@@ -45,7 +46,7 @@ Creating a Virtual Enviornment
 #######################################
 
 Understanding files and its extentions:
-1) interactive mode: small lines of python code called snippets which gives immedieately results while running.
+1) interactive mode: small lines of python code called snippets which gives immediately results while running.
 2) script mode: excute code from .py file
 3) Jupyter Notebooks: browser based IDE-like env where we can write/execute code which can include text, images, videos and more. File extention will be .ipynb file
 
