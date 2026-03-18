@@ -122,7 +122,7 @@ ipython interpreter:
                     sign of remainder = sign of divisor
 
 ###########################################
-    --> print function and single/double quoted strings 
+    --> ✅ print function and single/double quoted strings 
 
         In [17]: print('welcome to Path4Cloud') # we can put the string in single quotes
         welcome to Path4Cloud
@@ -141,7 +141,7 @@ ipython interpreter:
         In [24]:  print('"Welcome to Path4Cloud"') # if we need to print string in double quotes then we can enclosed with single quotes
         "Welcome to Path4Cloud"
 
-        ## Escape Character
+        ✅ Escape Character
         \n --> Insert a new line character in string
         \t --> Insert a horizontal tab in string
         \\ --> Insert a backslash character in string
@@ -155,7 +155,7 @@ ipython interpreter:
         Welcome\to\Path4Cloud
 
 
-        ## if we have multiline comment or string, we can't use this way, it can take the input as multiline but will print in one line only.
+        ✅ if we have multiline comment or string, we can't use this way, it can take the input as multiline but will print in one line only.
 
         In [30]: print('This is multiline string, \ 
         ...: I am first line, \
@@ -163,7 +163,7 @@ ipython interpreter:
         This is multiline string, I am first line, I am second line
 
 
-        DOCSTRING
+        ✅ DOCSTRING
         ## if we have multiple comment or string, we can use """ triple quotes to print in multiline as specified.
 
         In [31]: print("""This is multiline string,  
@@ -173,7 +173,7 @@ ipython interpreter:
         I am first line,
         I am second line
 
-        ## triple quoted string are stored in memory by python as single line
+        ✅ triple quoted string are stored in memory by python as single line
         In [40]: triple_string="""I am given as multiline,
         ...: but stored as single line in memory"""
 
@@ -185,18 +185,18 @@ ipython interpreter:
 
         Out[42]: 'I am given as multiline, \nbut stored as single line in memory'
 
-        ## we can club the string with operation as well, specify the string in qutoes.
+        ✅ we can club the string with operation as well, specify the string in qutoes.
 
         In [32]: print("sum is", 2 + 4)
         sum is 6
 
-        ## we can change the data type with defining the data type like:
+        ✅ we can change the data type with defining the data type like:
 
         In [36]: print('int(5.2)', 'truncates 5.2 to', int(5.2))  # so here int, changes the 5.2 float to int 5
         int(5.2) truncates 5.2 to 5
 
 ###########################################
-    --> Getting input from user
+    --> ✅ Getting input from user
         when we have requrirement to take the input from keyboard.
 
         # we can use the input function, which will take the input from user
@@ -213,13 +213,13 @@ ipython interpreter:
         ** Prompt to AI : Why the input function always returns a string?
 
 ###########################################
-    --> If statement and comparison operators
+    --> ✅ If statement and comparison operators
         - in Python, a condition is a expression that results in a Boolean Value of Capital T True or Capital F False
 
         - if statement syntax
             - If is a staic keyword, already reserved in Python.
             - when we start the if statement then we need to define the condition using operator which we discussed above.
-            - after condtion, if statement must be closed with colon (:), called as suite which tells the python to maintain the       indendation for further statement after colon
+            - after condition, if statement must be closed with colon (:), called as suite which tells the python to maintain the indendation for further statement after colon
             - we normaly uses 4 white spaces as space under if statement to maintain the statement
             - you can keep any number of spaces for indentation but it must be persistent across all statement
             - we can close or omit the spaces to close the simple if statement
@@ -233,7 +233,7 @@ ipython interpreter:
             ** check 05-if_statement.ipynb
 
 ###########################################
-    --> Object and Dynamic typing
+    --> ✅ Object and Dynamic typing
         - whenever we assign some value to any variable then internally, Python creating an identifier for that and it aims a portion of memory, which is an datatype obejct containing that value. e.g.
         x = 10
         here, x is the identifier which contains memory address where value is stored and refers to integer object containing value 10.
@@ -262,7 +262,7 @@ ipython interpreter:
             - Analogies that help explain dyanmic typing
             - how Garbage collection works in python?
 
-    --> STR Class Object in python (check 06-str_object.ipynb)
+    --> ✅ STR Class Object in python (check 06-str_object.ipynb)
         Each datatype in python is defined as known as CLASS and Class is a reusable software component that's kind of like a blueprint for how to create objects adn their capabilities.
 
         e.g.
@@ -278,7 +278,7 @@ ipython interpreter:
         (here this opertiaon can't modify the empty string rather it created a new string object and that refers to a3 now.)
         These data types are immutatble data types, we can't modfify them rather we can create a new object in memory.
 
-    --> Standalone Functions:
+    --> ✅ Standalone Functions:
             that can be called on particular string objects, knwon as METHODS.
             Anytime you call a function on a specific object, it's a method of that class that the object belongs to.
             e.g.
