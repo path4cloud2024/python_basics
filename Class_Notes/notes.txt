@@ -364,56 +364,6 @@ ipython interpreter:
 
 
 ###########################################
-    --> Decimal Type (not builtin, additional library which are predefined compatability with Python))
-        sometime, we need to deal with monetary amount or some exact numbers especailly floating number. By default, Python stores the float number as binary and if we need to print some additinoal decimal values on the right side of dot in value, then it might give you some buggy number which would be an issue if we are dealing with monetary amounts.
-        e.g.    
-        In [133]: f= 112.31
-
-        In [134]: print(f)
-        112.31
-
-        In [135]: print(f'{f:.20f}')
-        112.31000000000000227374
-
-        ** we can import the Decimal library to fix this with import command
-        In [138]: from decimal import Decimal ## Some libraries are coming from common module so we can impot only requried library from a module instead of import whole, here decimal is a module and Decimal is library.
-
-        We can define the value with Decimal as string and also perform the arithmetic operation:
-        ## we need to define a float value in Decimal like this, which will convert this value automatically in floating.
-
-        In [143]: x = Decimal('12.5')
-
-        In [144]: y = Decimal('3')
-
-        In [145]: x + y
-        Out[145]: Decimal('15.5')
-
-        In [146]: x // y
-        Out[146]: Decimal('4')
-
-        ** solve a Compound Interest problem with Decimal
-        A person invest  1000 INR in a saving account with 5% interest. Assuming that the person leaves all interest on deposit in the account, calculate and display the amount of money in the account at the end of each year for 10 years. Use this formula fro determining the amounts:
-        a = p(1+r)n (n is the power of (1+r))
-
-        In [139]: principal = Decimal('1000.00')  
-        In [140]: rate = Decimal('0.05')
-
-        In [150]: for year in range(1,11):
-        ...:     amount = principal * (1 + rate) ** year
-        ...:     print(f'{year:>2}{amount:>10.2f}')
-        ...:
-        1   1050.00
-        2   1102.50
-        3   1157.62
-        4   1215.51
-        5   1276.28
-        6   1340.10
-        7   1407.10
-        8   1477.46
-        9   1551.33
-        10   1628.89
-
-###########################################
     --> ✅ break and continue statement
         It can be used with context of for and while loop to continue or break the statement.
 
@@ -443,7 +393,7 @@ ipython interpreter:
 
 ###########################################
 
-    --> Function:
+    --> ✅ Function:
         Apart from inbuilt function, we can create are own functions as per our requirement.
         we need to defined the function with "def" keyword.
         e.g.
@@ -465,7 +415,7 @@ ipython interpreter:
         ** check 13-functions.ipynb
 
 ###########################################
-    --> Random numbers
+    --> ✅ Random numbers
         to generate or get the random numbers, we need to import the randoom library.
         # import random
         random.random()
@@ -477,7 +427,7 @@ ipython interpreter:
         ** check 14-random-num.ipynb
 
 ###########################################
-    --> List, Set, Tuple, dictionary
+    --> ✅ List, Set, Tuple, dictionary
 
         List: 
             - Ordered (keeps the order of insertion).
@@ -526,7 +476,7 @@ ipython interpreter:
         ** check 15-data-structure.ipynb
 
 ###########################################
-    --> Math Module:
+    --> ✅ Math Module:
         we have already predefined math module functions so we can use those while importing the math module.
         if you want to check what all sub functions to math are supported then you can type math. and then hit TAB buttion, will list all the supported methods.
 
@@ -545,7 +495,7 @@ ipython interpreter:
 
 
 ###########################################
-    --> Default parameter value:
+    --> ✅ Default parameter value:
         It is a best practice to keep some default value while defining the variable that will give the more flexibility to use those variables either in functions or any where in call.
         e.g.: lets define a function to calculate the mulitplication of two numbers, and assign a default value to those parameter in function defintion only, if user provides any values and use those else use defaults.
 
