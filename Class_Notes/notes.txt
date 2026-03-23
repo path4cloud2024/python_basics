@@ -394,7 +394,7 @@ ipython interpreter:
 
 
 ###########################################
-    --> ✅ break and continue statement
+    --> ✅ break, continue and pass statement
         It can be used with context of for and while loop to continue or break the statement.
 
         ** to break the iteraton:
@@ -412,6 +412,13 @@ ipython interpreter:
         ...:     print(number, end=' ')
         ...:
         0 1 2 3 4 6 7 8 9
+
+        ** to pass the null value or no action required:
+        In [20]: env = "prod"
+        In [21]: if env == 'prod':
+            ...:     pass
+            ...: else:
+            ...:     print('first deploy to test env')
 
         ** check 11-continue-break-statement.ipynb
 
