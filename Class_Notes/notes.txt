@@ -104,7 +104,7 @@ ipython interpreter:
         - Anthropx Claude
 
 ###########################################
-    --> Arithmetic
+    --> Arithmetic Operator
         * Addition +
         * Subtraction -
         * Multiplication *
@@ -120,6 +120,30 @@ ipython interpreter:
                     dividend = divisor × quotient + remainder 
                     and
                     sign of remainder = sign of divisor
+
+    --> Comparison Operator
+        == (Equal)
+        != (Not Equal)
+        > (Greater Than)
+        < (Less Than)
+        >= (Greater Than or Equal)
+        <= (Less Than or Equal).
+
+    --> Logical Operator
+        and
+        or
+        not
+
+    --> Assignment Operators
+        =, +=, -=, *=, /=, %=, **=, //=
+
+    --> Membership Operators
+        in
+        not in
+
+    --> Identity Operator
+        is
+        is not
 
 ###########################################
     --> ✅ print function and single/double quoted strings 
@@ -140,6 +164,12 @@ ipython interpreter:
 
         In [24]:  print('"Welcome to Path4Cloud"') # if we need to print string in double quotes then we can enclosed with single quotes
         "Welcome to Path4Cloud"
+
+        ✅ Comments in code
+        --> use # to comment any line
+        --> We can use multiple times # to comment all lines (if you want to comment multiple lines in one go then we can select the lines and press ctrl + / (forward slash)) to comment all lines
+        ---> Multilines comments can be done as doc string:
+            ''' start with these 3 singl or double quotes and without any escape character, you can type in next line and when done, close with '''
 
         ✅ Escape Character
         \n --> Insert a new line character in string
