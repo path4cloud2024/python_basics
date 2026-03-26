@@ -451,7 +451,7 @@ ipython interpreter:
         ** Lambda Function:
             A lambda function is a small anonymous (unnamed) function
             It is written in one line
-            
+
 
         ** check 13-functions.ipynb
 
@@ -550,3 +550,17 @@ ipython interpreter:
          def conversion(total,rate,*args)
 
          ** check 16-play_with_arguments.ipynb
+###########################################
+    --> ✅ Functional programming:
+            - contains less error so more concise
+            - easier to read, debug and modify
+        Key Concepts of Functional Programming
+            - Pure Functions
+            - No Side effects
+            - Immutability
+            - Declarative Functions (you say only what you want, not how to do that)
+            - Higher order functions (map/filter/reduce)
+            - list comprehensions
+            - lazy evaluation
+            - range and iterators with for
+            - reductions (sum, len, min, max)
