@@ -448,6 +448,10 @@ ipython interpreter:
                 max_num = num3
             return max_num
 
+        ** Lambda Function:
+            A lambda function is a small anonymous (unnamed) function
+            It is written in one line
+            
 
         ** check 13-functions.ipynb
 
