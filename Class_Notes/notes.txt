@@ -468,55 +468,7 @@ ipython interpreter:
         ** check 14-random-num.ipynb
 
 ###########################################
-    --> ✅ List, Set, Tuple, dictionary
-
-        List: 
-            - Ordered (keeps the order of insertion).
-            - Mutable (you can change elements).
-            - Allows duplicates.
-            - denotes with [ ]
- 
-        Tuple:
-            - Ordered
-            - Immutable (cannot change once created).
-            - Allows duplicates.
-            - Use when data should not change (like fixed config values).
-            - not mandatory to enclose with () but to better readability or as best practices, we enclose with ()
-
-        Set:
-            - Unordered (no index, order may change).
-            - Mutable (can add/remove elements).
-            - No duplicates allowed (automatically removes them).
-            - Great for checking unique items or membership tests (in is very fast in sets).
-
-        Dictionary:
-            - Stores data as key: value pairs.
-            - Keys must be unique and immutable (string, number, tuple).
-            - Values can be anything.
-            - Mutable.
-
-        Key Differences (Summary)
-        Feature	    List	    Tuple   	Set	       Dictionary
-        Ordered	    ✅ Yes	    ✅ Yes	❌ No	    ✅ Yes (since Python 3.7)
-        Mutable	    ✅ Yes	    ❌ No	✅ Yes	    ✅ Yes
-        Duplicates	✅ Yes	    ✅ Yes	❌ No	    Keys ❌, Values ✅
-        Access by	Index	      Index	    No index	 Key
-        Use Case	Store 	      Fixed 	Unique 	    Key–value mappings (lookups)
-                    sequence      data      items
-
-        👉 Simple analogy:
-
-        List = Shopping list (you can add/change items, order matters).
-
-        Tuple = Passport info (fixed, cannot change).
-
-        Set = Attendees in a meeting (no duplicates).
-
-        Dictionary = Phonebook (name → number mapping).
-
-        ** check 15-data-structure.ipynb
-
-###########################################
+    
     --> ✅ Math Module:
         we have already predefined math module functions so we can use those while importing the math module.
         if you want to check what all sub functions to math are supported then you can type math. and then hit TAB buttion, will list all the supported methods.
@@ -564,3 +516,71 @@ ipython interpreter:
             - lazy evaluation
             - range and iterators with for
             - reductions (sum, len, min, max)
+
+############################################
+
+--> ✅ List
+
+        List: 
+            - Ordered (keeps the order of insertion).
+            - Mutable (you can change elements).
+            - Allows duplicates.
+            - denotes with [ ]
+            - Accessing the list:
+                - We can use slicing
+            - It supported many methods
+            - List also supports concatenation
+
+        List comprehensions
+            - List comprehension is a short and clean way to create lists in Python.
+
+            ** check 18-list.ipynb           
+
+############################################
+
+--> ✅ Tuple:
+            - Ordered
+            - Immutable (cannot change once created).
+            - Allows duplicates.
+            - Use when data should not change (like fixed config values).
+            - not mandatory to enclose with () but to better readability or as best practices, we enclose with ()
+            - We can pack the sequence of elements with tuple and then unpack it and assign to same number of variables as we have elements.
+
+            ** check 19-tuple.ipynb           
+
+############################################
+
+--> ✅ Set:
+            - Unordered (no index, order may change).
+            - Mutable (can add/remove elements).
+            - No duplicates allowed (automatically removes them).
+            - Great for checking unique items or membership tests (in is very fast in sets).
+
+        Dictionary:
+            - Stores data as key: value pairs.
+            - Keys must be unique and immutable (string, number, tuple).
+            - Values can be anything.
+            - Mutable.
+
+        Key Differences (Summary)
+        Feature	    List	    Tuple   	Set	       Dictionary
+        Ordered	    ✅ Yes	    ✅ Yes	❌ No	    ✅ Yes (since Python 3.7)
+        Mutable	    ✅ Yes	    ❌ No	✅ Yes	    ✅ Yes
+        Duplicates	✅ Yes	    ✅ Yes	❌ No	    Keys ❌, Values ✅
+        Access by	Index	      Index	    No index	 Key
+        Use Case	Store 	      Fixed 	Unique 	    Key–value mappings (lookups)
+                    sequence      data      items
+
+        👉 Simple analogy:
+
+        List = Shopping list (you can add/change items, order matters).
+
+        Tuple = Passport info (fixed, cannot change).
+
+        Set = Attendees in a meeting (no duplicates).
+
+        Dictionary = Phonebook (name → number mapping).
+
+        ** check 15-data-structure.ipynb
+
+###########################################
