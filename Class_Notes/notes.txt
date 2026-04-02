@@ -534,7 +534,8 @@ ipython interpreter:
         List comprehensions
             - List comprehension is a short and clean way to create lists in Python.
 
-            ** check 18-list.ipynb           
+            ** check 18-list.ipynb  
+            ** check 19-list_continue.ipynb         
 
 ############################################
 
