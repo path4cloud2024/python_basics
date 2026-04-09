@@ -23,3 +23,8 @@
 
         ** check Data-Science 01-mean-median-mode.ipynb
 
+--> Simulation and Static Visualization
+    A very popular open source library "Matplotlib" help to visualize the numbers
+    It is a very powerfull and large library, almost more than 5000 pages of documentation
+    Used in animated Visualization
+
